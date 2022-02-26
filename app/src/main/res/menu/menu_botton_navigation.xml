@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_menu_home"
+        android:title="Home"
+        android:icon="@drawable/home"
+        />
+
+    <item
+        android:id="@+id/nav_menu_extrato"
+        android:title="Extrato"
+        android:icon="@drawable/extrato"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/nav_menu_saldo"
+        android:title="Saldo"
+        android:icon="@drawable/saldo"
+        />
+
+    <item
+        android:id="@+id/nav_menu_servico"
+        android:title="Serviços"
+        android:icon="@drawable/servico"
+        />
+
+    <item
+        android:id="@+id/nav_menu_ajuda"
+        android:title="Ajuda"
+        android:icon="@drawable/ajuda"
+        />
+
+</menu>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#F3F2F2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:elevation="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="9">
+
+                <TextView
+                    android:id="@+id/tv_nome_usuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Olá, Antonio"
+                    android:textColor="@android:color/holo_red_light"/>
+
+                <TextView
+                    android:id="@+id/tv_agencia_conta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0000-X    00000-X"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+            />
+
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_below="@id/toolbar"
+       android:layout_marginTop="16dp">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="25dp"
+           android:textColor="@android:color/holo_red_light"
+           android:text="Hoje dia 25,"
+           android:layout_marginLeft="32dp"/>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="o que deseja fazer?"
+           android:layout_marginLeft="32dp"
+           android:textSize="20dp"/>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="60dp"
+           android:orientation="horizontal"
+           android:layout_marginTop="4dp"
+           android:layout_marginRight="40dp"
+           android:layout_marginLeft="40dp"
+           android:background="#ED7000"
+           android:gravity="center">
+
+           <ImageView
+               android:layout_width="40dp"
+               android:layout_height="30dp"
+               android:src="@drawable/ic_cartoes"
+               android:layout_weight="3"
+               />
+
+           <TextView
+               android:layout_width="250dp"
+               android:layout_height="wrap_content"
+               android:text="Peça seu cartão de crédito agora e aproveite descontos em parceiros"
+               android:layout_marginLeft="32dp"
+               android:textSize="15dp"
+               android:textColor="@color/white"
+               android:layout_weight="7"/>
+
+       </LinearLayout>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/rv_item_banco"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_margin="16dp"
+           tools:listitem="@layout/item_banco"
+           />
+
+
+   </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-1dp"
+        android:background="#ED7000"
+        app:menu="@menu/menu_botton_navigation"/>
+
+</RelativeLayout>
